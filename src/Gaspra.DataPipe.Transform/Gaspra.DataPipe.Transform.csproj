@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.1</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Gaspra.DataPipe.Extract\Gaspra.DataPipe.Extract.csproj" />
+      <ProjectReference Include="..\Gaspra.DataPipe.Load\Gaspra.DataPipe.Load.csproj" />
+    </ItemGroup>
+
+</Project>
