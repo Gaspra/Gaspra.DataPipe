@@ -2,40 +2,28 @@ name: publish to nuget
 on:
   push:
     branches:
-      - main # Default release branch
+      - main
 jobs:
   publish:
     name: build, pack & publish
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v2
-
-      # Publish Extract
-      - name: Publish on version change
-        id: publish_nuget
+      - name: Publish extract on version change
+        id: publish_nuget_extract
         uses: gaspra/gaspra.publishdotnetnuget@v1
         with:
-          # Filepath of the project to be packaged, relative to root of repository
           PROJECT_FILE_PATH: src/Gaspra.DataPipe/Gaspra.DataPipe.Extract.csproj
-          # API key to authenticate with NuGet server
           NUGET_KEY: ${{secrets.NUGET_API_KEY}}
-
-      # Publish Transform
-      - name: Publish on version change
-        id: publish_nuget
+      - name: Publish transform on version change
+        id: publish_nuget_transform
         uses: gaspra/gaspra.publishdotnetnuget@v1
         with:
-          # Filepath of the project to be packaged, relative to root of repository
           PROJECT_FILE_PATH: src/Gaspra.DataPipe/Gaspra.DataPipe.Transform.csproj
-          # API key to authenticate with NuGet server
           NUGET_KEY: ${{secrets.NUGET_API_KEY}}
-
-      # Publish Load
-      - name: Publish on version change
-        id: publish_nuget
+      - name: Publish load on version change
+        id: publish_nuget_load
         uses: gaspra/gaspra.publishdotnetnuget@v1
         with:
-          # Filepath of the project to be packaged, relative to root of repository
           PROJECT_FILE_PATH: src/Gaspra.DataPipe/Gaspra.DataPipe.Load.csproj
-          # API key to authenticate with NuGet server
           NUGET_KEY: ${{secrets.NUGET_API_KEY}}
