@@ -4,7 +4,6 @@
         <Authors>Gaspra</Authors>
         <Description>Gaspra.DataPipe.Extract</Description>
         <PackageProjectUrl>https://github.com/Gaspra/Gaspra.DataPipe</PackageProjectUrl>
-        <PackageLicenseUrl>https://github.com/Gaspra/Gaspra.DataPipe/blob/main/LICENSE</PackageLicenseUrl>
         <RepositoryUrl>https://github.com/Gaspra/Gaspra.DataPipe</RepositoryUrl>
         <OutputType>Library</OutputType>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
