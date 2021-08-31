@@ -13,17 +13,17 @@ jobs:
         id: publish_nuget_extract
         uses: gaspra/gaspra.publishdotnetnuget@v1
         with:
-          PROJECT_FILE_PATH: src/Gaspra.DataPipe/Gaspra.DataPipe.Extract.csproj
+          PROJECT_FILE_PATH: src/Gaspra.DataPipe.Extract/Gaspra.DataPipe.Extract.csproj
           NUGET_KEY: ${{secrets.NUGET_API_KEY}}
       - name: Publish transform on version change
         id: publish_nuget_transform
         uses: gaspra/gaspra.publishdotnetnuget@v1
         with:
-          PROJECT_FILE_PATH: src/Gaspra.DataPipe/Gaspra.DataPipe.Transform.csproj
+          PROJECT_FILE_PATH: src/Gaspra.DataPipe.Transform/Gaspra.DataPipe.Transform.csproj
           NUGET_KEY: ${{secrets.NUGET_API_KEY}}
       - name: Publish load on version change
         id: publish_nuget_load
         uses: gaspra/gaspra.publishdotnetnuget@v1
         with:
-          PROJECT_FILE_PATH: src/Gaspra.DataPipe/Gaspra.DataPipe.Load.csproj
+          PROJECT_FILE_PATH: src/Gaspra.DataPipe.Load/Gaspra.DataPipe.Load.csproj
           NUGET_KEY: ${{secrets.NUGET_API_KEY}}
