@@ -10,13 +10,32 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      # Publish
+      # Publish Extract
       - name: Publish on version change
         id: publish_nuget
         uses: gaspra/gaspra.publishdotnetnuget@v1
         with:
           # Filepath of the project to be packaged, relative to root of repository
-          PROJECT_FILE_PATH: src/Gaspra.DataPipe/Gaspra.DataPipe.csproj
+          PROJECT_FILE_PATH: src/Gaspra.DataPipe/Gaspra.DataPipe.Extract.csproj
+          # API key to authenticate with NuGet server
+          NUGET_KEY: ${{secrets.NUGET_API_KEY}}
 
+      # Publish Transform
+      - name: Publish on version change
+        id: publish_nuget
+        uses: gaspra/gaspra.publishdotnetnuget@v1
+        with:
+          # Filepath of the project to be packaged, relative to root of repository
+          PROJECT_FILE_PATH: src/Gaspra.DataPipe/Gaspra.DataPipe.Transform.csproj
+          # API key to authenticate with NuGet server
+          NUGET_KEY: ${{secrets.NUGET_API_KEY}}
+
+      # Publish Load
+      - name: Publish on version change
+        id: publish_nuget
+        uses: gaspra/gaspra.publishdotnetnuget@v1
+        with:
+          # Filepath of the project to be packaged, relative to root of repository
+          PROJECT_FILE_PATH: src/Gaspra.DataPipe/Gaspra.DataPipe.Load.csproj
           # API key to authenticate with NuGet server
           NUGET_KEY: ${{secrets.NUGET_API_KEY}}
