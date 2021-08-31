@@ -12,4 +12,8 @@
         <!--Increment version to produce package-->
         <Version>0.0.1</Version>
     </PropertyGroup>
+    <ItemGroup>
+      <ProjectReference Include="..\Gaspra.DataPipe.Extract\Gaspra.DataPipe.Extract.csproj" />
+      <ProjectReference Include="..\Gaspra.DataPipe.Load\Gaspra.DataPipe.Load.csproj" />
+    </ItemGroup>
 </Project>
