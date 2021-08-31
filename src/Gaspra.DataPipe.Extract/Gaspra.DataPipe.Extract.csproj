@@ -1,7 +1,16 @@
 <Project Sdk="Microsoft.NET.Sdk">
-
     <PropertyGroup>
         <TargetFramework>netstandard2.1</TargetFramework>
+        <Authors>Gaspra</Authors>
+        <Description>Gaspra.DataPipe.Extract</Description>
+        <PackageProjectUrl>https://github.com/Gaspra/Gaspra.DataPipe</PackageProjectUrl>
+        <PackageLicenseUrl>https://github.com/Gaspra/Gaspra.DataPipe/blob/main/LICENSE</PackageLicenseUrl>
+        <RepositoryUrl>https://github.com/Gaspra/Gaspra.DataPipe</RepositoryUrl>
+        <OutputType>Library</OutputType>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <NeutralLanguage>en-GB</NeutralLanguage>
+        <IsPackable>true</IsPackable>
+        <!--Increment version to produce package-->
+        <Version>0.0.1</Version>
     </PropertyGroup>
-
 </Project>
